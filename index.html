@@ -1,0 +1,52 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MAKE ME BIIIIIIIIIIGGGG</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/b621021f-2430-4043-8d8e-3de7ca679c13%2Ffav.png?v=1564836334937" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- load p5.js -->
+    <!-- We use p5.js to get access to the webcamera and use canvas easier -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    
+    <!-- load ml5.js -->
+    <!-- We use ml5.js because of simple syntax. Simple syntax forever. <3 -->
+    <script src="https://unpkg.com/ml5@0.2.3/dist/ml5.min.js" type="text/javascript"></script>
+    
+    <!-- Our logic is here -->
+    <script src="posenet.js"></script>
+  </head>
+  <body>
+    <!-- I put editable text to a container, because editable text doesn't work if I use 'position: absolute'.-->
+    <!-- We use 'position: absolute' to put editable text put on top of canvas. -->
+    <div id="textContainer">
+      <!-- Editable text -->
+      <div id="text" contenteditable="true">
+        Allow access to your camera to try this experiment and wait a few seconds. Made by @monolesan on Twitter. Remix project: https://glitch.com/~make-me-big
+      </div>
+    </div>
+    <!-- Canvas -->
+    <div id="videoContainer">
+      
+    </div>
+  </body>
+</html>
+
+<!-- SUPER PUPER GUIDE ABOUT TENSORFLOR.JS -->
+<!-- https://www.analyticsvidhya.com/blog/2019/06/build-machine-learning-model-in-your-browser-tensorflow-js-deeplearn-js/ -->

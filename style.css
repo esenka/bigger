@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Grafier-BlackText';
+  src: url("https://cdn.glitch.com/b621021f-2430-4043-8d8e-3de7ca679c13%2FGrafier-BlackText.ttf?v=1564552228299") format("truetype"), /* Safari, Android, iOS */
+       url("https://cdn.glitch.com/b621021f-2430-4043-8d8e-3de7ca679c13%2FGrafier-BlackText.woff?v=1564552240351") format("woff"), /* Modern Browsers */
+       url("https://cdn.glitch.com/b621021f-2430-4043-8d8e-3de7ca679c13%2FGrafier-BlackText.woff2?v=1564552239360") format("woff2"); /* Modern Browsers */
+}
+
+body {
+  margin: 1em;
+  height: 100%;
+  width: 100%;
+}
+
+#text {
+  font-family: 'Grafier-BlackText';
+  font-size: 18px;
+  width: 75%;
+  height: 100vh;
+  border: none;
+  outline: none;
+  resize: none;
+  overflow: auto;
+  background: none;
+  display: block;
+}
+
+#textContainer {
+  position: absolute;
+  z-index: 31;
+  top: 2em;
+  left: 2em;
+}
+
+#videoContainer {
+  position: absolute;
+  z-index: 1;
+  top:0;
+  left:0;
+}

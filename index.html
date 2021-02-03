@@ -1,0 +1,316 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>✧*マロル мирору マロル ✧*.</title>
+<!--     <link href="https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Podkova&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    <meta name="description" content="A cool thing made with Glitch" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://cdn.glitch.com/be4e0882-abe9-46e4-bdcf-b0fd11d076d8%2Ffav_xzy_icon.ico?v=1582702626432"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <script
+      src="//cdn.rawgit.com/mrdoob/three.js/master/build/three.min.js"
+      defer
+    ></script>
+
+    <script
+      src="//cdn.rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js"
+      defer
+    ></script>
+    <script
+      src="//cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"
+      defer
+    ></script>
+    <!-- load p5.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js" defer></script>
+    <!-- load ml5.js -->
+    <script src="https://unpkg.com/ml5@0.2.3/dist/ml5.min.js" type="text/javascript"></script>
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/ui.js" defer></script>
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <div id="introBack">
+    
+    </div>
+<!--     <div id="movingtext">
+      <span class="readbelow">READ CREATION PROCESS BELOW</span>
+      <span class="readbelow">READ CREATION PROCESS BELOW</span>
+    </div> -->
+    <img id="introdifference" src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2FFrame%201.png?v=1584866843801">
+    <img id="athingthathidescamera" src="https://cdn.glitch.com/be4e0882-abe9-46e4-bdcf-b0fd11d076d8%2FRectangle%2013.png?v=1580990468992">;
+    <div id="background">
+      <img id="transparentandhuesky" src="https://cdn.glitch.com/be4e0882-abe9-46e4-bdcf-b0fd11d076d8%2Ffirst%20seconds.png?v=1580989275340">
+        <a class="twitterlinkONTHESTART" id="twitterlink" onmouseover="animation(this)" onmouseout="stopanimation(this)" href="https://twitter.com/monolesan" target="_blank">h<br>t<br>t<br>p<br>s<br>:<br>/<br>/<br>t<br>w<br>i<br>t<br>t<br>e<br>r<br>.<br>c<br>o<br>m<br>/<br>m<br>o<br>n<br>o<br>l<br>e<br>s<br>a<br>n</a>
+    </div>
+    
+    <img id="gard" src="https://cdn.glitch.com/be4e0882-abe9-46e4-bdcf-b0fd11d076d8%2Fimage%2017.png?v=1580892655116">
+    
+    <img id="logo" src="https://cdn.glitch.com/be4e0882-abe9-46e4-bdcf-b0fd11d076d8%2Fmiroru%20logo.png?v=1581671368087">
+    <img id="logoBlack" src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2FFrame%201.png?v=1584866843801">
+    <div id="description" class="description_ONSTART">
+      <p id="descriptionText">
+        what about an animation based on your movements?
+      </p>
+      <button id="start" onclick="videoMetamorphosis()">
+       start play play start start
+      </button>
+      <button id="butttonONSTART" onclick="videoMetamorphosis(); removeButtonAndBack()">
+       start play play start start
+      </button>
+    </div>
+    <div id="p5Div"></div>
+    <canvas id="myCanvas"></canvas>
+    <section id="creationprocess">
+<!--       IDEA -->
+      <div class="littlesection">
+        <h1>
+          idea
+        </h1>
+        <p class="text">
+          interactive images on the web that react on person’s movements
+        </p>
+      </div>
+<!--       WHAT IS IT DOING-->
+      <div class="littlesection">
+        <h1>
+          What is it doing?
+        </h1>
+        <p class="text">
+          bad quality 3D David’s head repeats your head rotation and cries if you leave him alone
+        </p>
+      </div>
+<!--     What technology I used there?   -->
+      <div class="littlesection">
+        <h1>
+          What technology is used there?
+        </h1>
+        <p class="text">
+          <a href="https://github.com/tensorflow/tfjs-models/tree/master/posenet" target="_blank">TensorFlow.js PoseNet model</a> — detects body parts <br>
+          <a href="https://p5js.org/" target="_blank">p5.js</a> — for a work with a canvas (PoseNet requires canvas) and drawing acid green tears <br>
+          <a href="https://threejs.org/" target="_blank">three.js</a> — for a work with 3D (I could use just p5.js in this case, but I wanted to create more complex project in the future) <br>
+          <a href="https://ml5js.org/" target="_blank">ml5.js</a> — for an easy work with TensorFlow.js
+        </p>
+      </div>
+      
+<!--       LINKS -->
+      <div class="littlesection">
+        <h1>
+          LllI𝖎̞͇́̌̚iNnnKkkSss
+        </h1>
+        <p class="text">
+          <a href="https://www.figma.com/community/file/827168708490044239/miroru%231" target="_blank">Design on Figma</a> #OpenDesign ✧  • 　.　 　* <a href="https://twitter.com/turtles_pink_/status/1038830894109347846" target="_blank">What is Open Design?????</a><br>
+          <a href="https://glitch.com/~miroru" target="_blank">Code on Glitch</a> <br>
+          <a href="https://editor.p5js.org/monolesan/sketches/3CQ8whk-h" target="_blank">Tears animation code on p5.js editor</a>
+        </p>
+        <p>
+          ✧* Let’s create something cool and innovative with AI! *✧
+        </p>
+      </div>
+      
+<!--       ROTATION -->
+      <div class="littlesection">
+        <h1>
+          Detect head rotation
+        </h1>
+        <p class="text">
+          <b>step 1</b>
+        </p>
+        <p class="text">
+          Calculate distance between right ear and nose and distance between left ear and nose using Pythagorean theorem.<br>
+          distance² = (ear.X - nose.X)² + (ear.Y - nose.Y)²
+        </p>
+        <img src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2Fhow%20to%20find%20the%20distance%20between%20two%20points_.png?v=1585829005433">
+        <p class="text">
+          In code this formula is:
+        </p>
+        <p class="code">
+          distanceLeftEarNose = Math.round(Math.sqrt(Math.pow(leftEar.x - nose.x, 2) + Math.pow(leftEar.y - nose.y, 2))); <br>
+          <br>
+          distanceRightEarNose = Math.round(Math.sqrt(Math.pow(rightEar.x - nose.x, 2) + Math.pow(rightEar.y - nose.y, 2)));
+        </p>
+        <p class="text">
+          The more left ear and nose distance the less distance between right eye and nose and vice versa. If a person turns head right the right distance decreases and the left distance increases. If a person turns head left the right increases and the left distance decreases. Distantions are almost equal if a person looks straight.
+        </p>
+        <img src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2Fleft%20right%20forward.png?v=1585837274148">
+        <p class="text">
+          <b> step 2</b>
+        </p>
+        <p class="text">
+          Add up two distances:
+        </p>
+        <p class="code">
+          distanceBetweenTwoEars = distanceLeftEarNose + distanceRightEarNose;
+        </p>
+        <p class="text">
+          And divide the sum by two:
+        </p>
+        <p class="code">
+          distanceGeneralForEachEar = distanceBetweenTwoEars / 2;
+        </p>
+        <p class="text">
+          <b>step 3</b>
+        </p>
+        <p class="text">
+          The field of view is 180º, it starts from the left side where it equals 0º (this is why rotation percent is calculated with the distance between left ear and nose). The 3d model looks forward if rotation degree equals 90º.
+        </p>
+        <img src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2Fi%20dont%20think%20someone%20understands%20this%20picture%20haha.png?v=1585830464921">
+        <p class="text">
+          Calculate rotation percent:
+        </p>
+        <img src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2Fcalculate%20x.png?v=1585829003322">
+        <p class="code">
+          rotationPercent = (distanceLeftEarNose * 100) / distanceGeneralForEachEar;
+        </p>
+      </div>
+      
+<!--       how to detect if human left it alone -->
+       <div class="littlesection">
+        <h1>
+          how to detect if human left David alone ((
+        </h1>
+         <p class="text">
+           That’s quite a simple task. For this, score of right and left eyes are tracked and compared with min and max numbers. Min is 0.2, we are almost sure there is no face, so we can draw tears. Max is 0.5, we are almost sure there is a face.
+         <br>
+           Score is the probability of eyes being on the image. The maximum is 1.
+         </p>
+         <p class="code">
+        if (rightEye.score ≺ 0.2 && leftEye.score ≺ 0.2) {<br>
+          isthereface = false;<br>
+      }<br>
+           <br>
+      if (rightEye.score ≻ 0.5 && leftEye.score ≻ 0.5) {<br>
+<!--            white space is used there for space in code https://beautifuldingbats.com/whitespace/ -->
+        isthereface = true;<br>
+      }
+         </p>
+      </div>
+      
+<!--       Gates and s̎̚k̋ͭͤy̻̩ͦ̃̐ is my design -->
+       <div class="littlesection">
+        <h1>
+          Gates and s̎̚k̋ͭͤy̻̩ͦ̃̐ is my design
+        </h1>
+        <p class="text">
+          I was inspired by a random picture on the www internet, BONES and webpunk.
+        </p>
+        <p class="text">
+          <b>the picture:</b>
+        </p>
+         <img style="max-width: 400px; height: auto;" src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2Finspiringpicture.png?v=1585654131422">
+        <p class="text">
+        <b> BONES's video:</b>
+        </p>
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/aMYFuRJtcHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <p class="text">
+         <b>w̰͛eͧ̏ͫ͒b̩̩͆̔͊́p̺̓́̀ͦ̔̚u̹̜̳͗̆̃̓ͯ̚n̜̼̲͍̒͌̅̇̔̐̚k̥̤̙̬̮͎͔̊̍ͦͪ͑:</b>
+        </p>
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/8GCbNV0T6o4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <img src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2Fwebpunkmoodboard.png?v=1585654130759">
+         <p class="text">
+          here are some drafts:
+        </p>
+         <img src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2Fdrafts.png?v=1585658531256">
+      </div>
+      
+<!--       ART OF THE LINK -->
+       <div class="littlesection">
+        <h1>
+          An art of the link͔͙̦̞͕̞̜̝
+        </h1>
+         <img style="height: 370px;" src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2FScreenshot%202020-03-26%20at%2018.07.54.png?v=1585712280019">
+         <img style="max-height: 370px;" src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2Fthelink.gif?v=1585713822511">
+         <p class="text">
+          <b>b̤͗̈́ùͤ̋g̜͑͊s͓̙ͭs̘̟ͧs͖̎ͨzzz</b>
+        </p>
+        <p class="text">
+          Like everything in this project, the link of my twitter has bugs too. It works quite interesting.<br>
+        </p>
+        <p class="text">
+          There are two functions:<br>
+          1. the first one replaces the text on the link to zalgo, strange symbols, Russian letters and Japanese kanji on hover. It adds symbols from an array (with these symbols) piece by piece every 50 milliseconds.<br>
+          2. the second function returns the link text when the cursor is moved away.<br>
+        </p>
+         <p class="text">
+           How and why is it buggy?
+         </p>
+         <p class="text">
+           There is no bug if the animation on hover is completed (all symbols from the array are shown). Otherwise, if the cursor moved away until the first function is completed on hover, the second function is called. This function changes all written symbols into the link text, and all not shown symbols is being adding to the text of the link.
+         </p>
+         <p class="text">
+          <i> you can find link animation code on public/ui.js </i>
+         </p>
+         <p class="text">
+           <b>text</b>
+         </p>
+         <p class="text">
+           The text is written in column like in Japanese writing system.
+         </p>
+         <img style="max-width: 800px;" src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2FIMG_20200401_212652.jpg?v=1585740573920">
+         <p class="text">
+           Initially, I wanted the link button to change color on hover. But then I found <a href="https://vk.com/fucktheworld" target="_blank">a group on VK</a> with pictures and music. The look of the group inspired me to fill the link button with strange symbols in animation.
+         </p>
+         <img src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2FScreenshot%202020-03-26%20at%2018.05.35.png?v=1585740579467">
+         <p class="text">
+          <b>d𝖉̲̼̬̲̏𝖉̱dddrafts</b>
+        </p>
+         <img src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2Fanimation%20how%20i%20wanted.gif?v=1585741101284">
+         <img src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2FScreenshot%202020-03-26%20at%2017.51.30.png?v=1585741101341">
+         <img src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2FScreenshot%202020-04-01%20at%2021.39.32.png?v=1585741194636">
+         <img src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2FScreenshot%202020-04-01%20at%2021.41.12.png?v=1585741290533">
+      </div>
+      
+<!--       Logo and name -->
+      <div class="littlesection">
+        <h1>
+          Logo and name
+        </h1>
+        <p class="text">
+          I tried some fonts for the name header of the project:
+        </p>
+        <img src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2Fwindows.png?v=1585658351599">
+        <p class="text">
+         I chose Grind and Death font, then I played with colors...
+        </p>
+         <img style="max-width: 500px; height: auto;" src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2FScreenshot%202020-03-31%20at%2022.43.53.png?v=1585658649357">
+        <p class="text">
+         ...and combination of languages. I used katakana letters there. Katakana sometimes is used for transcription of foreign-language words into Japanese. The word “mirror” will sound like “miroru” in transcription. <br>
+          A little tip: マ is read like “mi”, ロ is read “ro”, ル is read “ru”.
+        </p>
+         <img style="width: 100vw; height: auto;" src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2Fcombination%20of%20languages.png?v=1585659353251">
+        <p class="text">Then I played with colors, added a yellow background:</p>
+        <img src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2FScreenshot%202020-04-01%20at%2013.30.57.png?v=1585711874468">
+        <p class="text">Eventually, got this:</p>
+        <img src="https://cdn.glitch.com/43508287-5f45-4588-b691-6d007a0b83a5%2Flogo%20explonation.png?v=1585711811494">
+      </div>
+      <div class="littlesection">
+        <h1>
+          That's the end. Thanks for reading!
+        </h1>
+        <p class="text">
+          Check out my other experiments with AI on <a href="https://monolesan.com" target="_blank">https://monolesan.com</a>
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

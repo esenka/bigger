@@ -1,0 +1,362 @@
+body {
+  margin: 0;
+/*   background-color: #FF0CF6; */
+}
+
+#athingthathidescamera {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: row;
+}
+
+#transparentandhuesky{
+  width: 90vw;
+}
+
+#twitterlink {
+  padding: 10px;
+/*   height: 50vh; */
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  line-height: 80%;
+  text-decoration: none;
+
+/*   background: #FFFFFF; */
+  color: black;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 7px 7px 9px rgba(0, 117, 255, 0.48);
+  max-width: 4vw;
+  white-space: nowrap;
+  
+/*   mix-blend-mode: difference; */
+  
+  z-index: 10;
+}
+
+#twitterlink:hover {
+  background: #05FF00;
+  animation: 1s infinite shadowmoves;
+/*   animation: 1s infinite borderincreases; */
+}
+
+.twitterlinkONTHESTART {
+  background: #05FF00;
+}
+
+.twitterlinkAFTER {
+  background: #FFFFFF;
+}
+
+@keyframes shadowmoves {
+  0% { 
+    outline-offset: -1px; outline: 1px solid #000000;
+    box-shadow: 15px 7px 0px #00FF19; 
+  }
+  50% { box-shadow: 15px 7px 21px #00FF19; }
+  80% { box-shadow: 9px 9px 21px #00FF19; }
+  100% { 
+    outline-offset: -10px;  outline: 10px solid #000000;
+/*     border: 10px solid #000000; */
+    box-shadow: 15px 7px 0px #00FF19; 
+  }
+}
+
+@keyframes borderincreases {
+  0% { outline-offset: -1px; outline: 1px solid #000000; }
+ 
+  100% { outline-offset: -10px;  outline: 18px solid #000000; }
+}
+
+#gard {
+  position: absolute;
+  left: 4vw;
+  top: 8vh;
+  width: 70vw;
+  mix-blend-mode: difference;
+}
+
+#twitterlink_container {
+  display: flex;
+}
+
+#twitterlink_animation {
+  background: green;
+  position: relative;
+  display: flex;
+  z-index: -1;
+}
+
+#description {
+  position: absolute;
+  z-index: 10;
+  width: 20vw;
+  left: 58.1vw;
+  top: 21vh;
+  display: block;
+	overflow: hidden;
+  min-height: 310px;
+  
+  background: #FFFFFF;
+  border: 3px dashed #000000;
+  box-sizing: border-box;
+}
+
+#description p {
+  font-family: "Open Sans", sans-serif;
+  
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 28px;
+  
+  margin: 60px 0 68px 28px;
+}
+
+#description img {
+  transform: translate(-5px, -35px);
+}
+
+#logo {
+  position: absolute;
+  z-index: 11;
+  left: 58.1vw;
+  top: 21vh;
+/*   width: 17vw; */
+  transform: translate(-5px, -35px);
+/*   mix-blend-mode: difference; */
+  
+}
+
+#logoBlack {
+  position: absolute;
+  z-index: 12;
+  left: 58.1vw;
+  top: 21vh;
+  width: 17vw;
+  height: 12vh;
+  transform: translate(-5px, -35px);
+  mix-blend-mode: difference;
+  
+}
+
+
+#start, #butttonONSTART {
+  font-family: 'Zhi Mang Xing', cursive;
+  font-size: 40px;
+  padding: 0;
+  white-space: nowrap;
+  border: none;
+  
+  cursor: pointer;
+  
+  margin-bottom: 24px;
+}
+
+#start:hover {
+  background: #05FF00;
+  animation: 1s infinite shadowmoves;
+}
+
+#start:focus {
+  outline: none;
+}
+
+#start {
+  display: none;
+  background: #FF0CF6;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.53);
+}
+
+#p5Div,
+#myCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#p5Div {
+  z-index: 3;
+}
+
+#myCanvas {
+  z-index: 2;
+/*   height: 720px;
+  width: 1280px;
+   */
+/*   width: 100vw;
+  height: 100vh; */
+}
+
+#introBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  background: black; 
+}
+
+/* .description_ONSTART {
+  color: #FF0CF6;
+  border: 3px dashed #FE0BF5;
+  background: #00F309;
+} */
+
+#butttonONSTART {
+  background: black;
+  color: #FF0CF6;
+}
+
+#butttonONSTART:hover {
+  animation: 1s infinite shadowmovesONSTART;
+}
+
+@keyframes shadowmovesONSTART {
+  0% { 
+    outline-offset: -1px; outline: 1px solid #00F309;
+    box-shadow: 15px 7px 0px #FE0BF5; 
+  }
+  50% { box-shadow: 15px 7px 21px #FE0BF5; }
+  80% { box-shadow: 9px 9px 21px #FE0BF5; }
+  100% { 
+    outline-offset: -10px;  outline: 10px solid #00F309;
+/*     border: 10px solid #000000; */
+    box-shadow: 15px 7px 0px #FE0BF5; 
+  }
+}
+
+.dissapearslowly {
+  animation: 5s 1 dissapear;
+}
+
+.changeColor {
+  animation: 4s 1 changeColor;
+}
+
+@keyframes dissapear {
+  0% { 
+/*     background: yellow;  */
+    background: #FF0CF6; 
+    opacity: 1;
+    mix-blend-mode: difference;
+  }
+  10% {
+    opacity: 1;
+/*     background: yellow; */
+    mix-blend-mode: difference;
+  }
+  30% {
+/*     background: #FF0CF6;  */
+    opacity: 1;
+    mix-blend-mode: difference;
+  }
+  100% { 
+    opacity: 0;
+    mix-blend-mode: difference;
+  }
+}
+
+@keyframes changeColor {
+  0% { 
+    background: #00F309;
+  }
+  100% { 
+    background: #FFFFFF;
+    color: black;
+    border: 3px dashed #000000;
+  }
+}
+
+.readbelow {
+  display: inline-block;
+  -webkit-animation: line 40s linear infinite reverse;
+  animation: line 40s linear infinite reverse;
+  text-transform: uppercase;
+}
+
+#movingtext {
+  z-index: 10;
+  padding-top: .5rem;
+  display: block;
+  position: relative;
+  font-size: 2.4rem;
+  line-height: 1em;
+  white-space: nowrap;
+  text-align: left;
+  color: black;
+  transform: rotate(-45deg);
+  width: 500px;
+  background: #00FF47;
+  
+}
+
+@keyframes line {
+  0% { transform: translateX(0%);}
+  100% { transform: translateX(-100vw);}
+}
+
+#creationprocess {
+  background: white;
+/*   background: #FF0CF6; */
+}
+
+.littlesection {
+  
+}
+
+h1 {
+  margin-left: 4em;
+  margin-top: 2em;
+  font-size: 26px;
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.text {
+  margin-left: 4em;
+  font-size: 22px;
+  max-width: 70%;
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.littlesection a {
+  
+}
+
+.littlesection img {
+  max-width: 100vw;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4em;
+}
+
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.code {
+  background: #E5E5E5;
+  text-size: 22px;
+  padding: 16px;
+  margin: 0.1em 4em 1em 4em;
+  border: 2px solid #05FF00;
+  font-family: 'Podkova', serif;
+}
+

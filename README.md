@@ -1,6 +1,6 @@
-Make me big (pleeeeeeaaassssseeeee)
+I can't reeead 
 ==========
-It's an UX experiment, where a text changes size when you move back and forth in front of the screen.
+You can't read it when you are far away right? Yeah that sucks
 
 👩🏼‍💻 Problem I solved ]{ WHY?
 -------------------
@@ -46,19 +46,5 @@ Are you a newbie in a ML world? I share with you an [amazing tutorial](https://w
 I used a great font — `Grafier` by [Alex  Slobzheninov](https://www.behance.net/slobzheninov). You can get to know about this font [on Behance](https://www.behance.net/gallery/75437393/Grafier-Serif-Typeface-Free-Fonts-Variable-Font). This font is free for personal non commercial projects (read the license). 
 Font files are in `assets`. 
 <br>
-
-🔮 My other experiments
--------
-* [Mood + AI + Design](https://glitch.com/~mood-ai-design) where design is changed based on your emotions. Used: `face-api.js`.
-* [Smile and like](https://glitch.com/~smile-and-like) where you smile and like posts on a fictional social media, haha. Used: `face-api.js`, `EJS`.
-<br>
-
-🐢 Me on social media
-------------------------
-* Twitter: [@monolesan](https://twitter.com/monolesan)
-* Email: monolesan@gmail.com
-* Recently I created an Instagram to share my artworks: [@ringyokusan](https://www.instagram.com/ringyokusan/)
-
-If you have questions or just want to talk/work with me, DM me on Twitter or just email me.
 
 <img src="https://cdn.glitch.com/b621021f-2430-4043-8d8e-3de7ca679c13%2Fsomething%20is%20in%20the%20left%20eye...%20mdaaa%20ush.svg?v=1564912727538"/>
